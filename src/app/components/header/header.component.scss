@@ -21,22 +21,39 @@
     border-radius: 50%;
 }
 
- .rounded-image {
+.rounded-image {
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 
-.dialog-content{
+.dialog-content {
     margin-top: 10px;
-    cursor: pointer; 
+    cursor: pointer;
     padding: 10px 50px 10px 10px;
     border-bottom: 1px solid #e4e4e9;
 }
-ul .myli{
+
+ul .myli {
     border-bottom: 1px solid #e4e4e9;
-    
+
 }
-li{
+
+li {
     cursor: pointer;
+}
+
+.title {
+    cursor: pointer;
+    font-family: 'Verdana', sans-serif; /* Use a modern and clean font */
+    font-size: 1rem; /* Increase font size for emphasis */
+    color: white; /* White text for contrast */
+    text-transform: uppercase; /* Convert text to uppercase */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add padding around the title */
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    border-radius: 5px; /* Round the corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    margin: 5px auto; /* Center the element and add margin */
+    max-width: 600px; /* Limit the width to prevent it from stretching too much */
 }
