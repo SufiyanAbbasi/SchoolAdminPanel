@@ -1,0 +1,60 @@
+<div class="card flex justify-content-center">
+    <p-sidebar [(visible)]="sidebarVisible" (onHide)="closeCallback()" (onHide)="onSidebarHide()"
+        [styleClass]="sidebarVisible ? 'w-16rem' : 'w-5rem minimized-sidebar'">
+        <ng-template pTemplate="headless">
+            <div class="flex flex-column h-full">
+                <div class="flex align-items-center justify-content-between px-4 pt-3 flex-shrink-0">
+                    <span class="inline-flex align-items-center gap-2">
+                        <p-image src="../../../assets/images/logo.png" class="hidden sm:block cursor-pointer"
+                            alt="Image" width="150" />
+                    </span>
+                    <p-button icon="pi pi-bars" class="ml-2  md:hidden" (click)="toggleSidebar()" />
+
+                </div>
+                <div class="overflow-y-auto">
+                    <ul class="list-none p-3 m-0">
+                        @for(categoryname of sidebar; track categoryname){
+                        <li>
+                            <div pRipple pStyleClass="@next" enterFromClass="hidden" enterActiveClass="slidedown"
+                                leaveToClass="hidden" leaveActiveClass="slideup"
+                                class="p-3 flex align-items-center justify-content-between text-600 cursor-pointer p-ripple">
+                                <span class="text-sm opacity-70">{{categoryname.category}}</span>
+                            </div>
+                            <ul class="list-none p-0 m-0 overflow-hidden">
+                                @for( item of categoryname.items; track item){
+                                <li>
+                                    <a pRipple pStyleClass="@next" enterFromClass="hidden" enterActiveClass="slidedown"
+                                        leaveToClass="hidden" leaveActiveClass="slideup"
+                                        class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple"  (click)="onItemClicked(item)">
+                                        <i class="{{ getIcon(item) }} mr-2"></i>
+                                        <span class="font-medium">{{item.name}}</span>
+                                        @if(item.sublist.length > 0){
+                                        <i class="pi pi-chevron-down ml-auto"></i>
+                                        }
+                                    </a>
+                                    <ul
+                                        class="list-none py-0 pl-3 pr-0 m-0 hidden overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out">
+                                        @for(subitem of item.sublist; track subitem){
+                                        <li>
+                                            <a pRipple
+                                                class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple"  (click)="onSublistItemClicked(item, subitem)">
+                                                <span class="font-medium">{{subitem}}</span>
+                                            </a>
+                                        </li>
+                                        }
+                                    </ul>
+                                </li>
+                                }
+
+                            </ul>
+                        </li>
+                        }
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </ng-template>
+    </p-sidebar>
+</div>

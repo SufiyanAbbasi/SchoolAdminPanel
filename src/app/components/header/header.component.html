@@ -1,0 +1,132 @@
+<div class="card px-3">
+    <p-toolbar>
+        <div class="p-toolbar-group-start ml-1 md:ml-4 lg:ml-6">
+            <p-image src="../../../assets/images/logo.png" class="hidden sm:block cursor-pointer" alt="Image"
+                width="150" />
+            <!-- <i class="pi pi-bars sm:hidden" style="font-size: 2rem; color:rgb(63, 63, 148);  "  (click)="toggleSidebar()"></i> -->
+            
+            <p-button icon="pi pi-bars" class="sm:ml-2 md:ml-4 lg:ml-6" (click)="toggleSidebar()"/>
+            <span class="p-input-icon-left ml-6  hidden lg:block">
+                <i class="pi pi-search"></i>
+                <input pInputText style="width: 300px;" placeholder="Search here" />
+            </span>
+
+
+        </div>
+
+        <div class="p-toolbar-group-center sm:hidden">
+            <p-image src="../../../assets/images/logo-small.png" alt="Image" width="40" />
+        </div>
+        <div class="p-toolbar-group-end">
+            <div class="p-d-flex p-jc-between p-ai-center gap-3 " style="position: relative;">
+                <div class="hidden md:flex p-d-flex p-jc-center p-ai-center cursor-pointer"
+                    style="width: 35px; height: 35px; background-color: #F7F7FA; border-radius: 50%;">
+                    <p-image src="../../../assets/images/flag.svg" alt="Image" width="20" (click)="toggleDropdown('flag')"
+                        #icon></p-image>
+                </div>
+                <div *ngIf="currentOpenDropdown === 'flag'" class="dialog"
+                    style="position: absolute; top: 100%; left: -50%; border: 1px solid #e4e4e9; z-index: 1000; background-color: #fff;  ">
+                    <!-- Dialog content -->
+                    <div class="dialog-content">
+                        <img src="assets/images/flag.svg" alt="Flag" class="dialog-icon">
+                        <span class="country-name ml-3">France</span>
+                    </div>
+                    <div class="dialog-content">
+                        <img src="assets/images/flag.svg" alt="Flag" class="dialog-icon">
+                        <span class="country-name  ml-3">English</span>
+                    </div>
+                    <div class="dialog-content">
+                        <img src="assets/images/flag.svg" alt="Flag" class="dialog-icon">
+                        <span class="country-name  ml-3">Turkiye</span>
+                    </div>
+                </div>
+
+
+                <div class="p-d-flex p-jc-center p-ai-center cursor-pointer"
+                    style="width: 35px; height: 35px; background-color: #F7F7FA; border-radius: 50%; position: relative;">
+                    <p-image src="../../../assets/images/bell.svg" alt="Image" width="20"  (click)="toggleDropdown('bell')"></p-image>
+                </div>
+                @if(currentOpenDropdown === 'bell'){
+                <div class="card " style="position: absolute; top: 100%; border: 1px solid #e4e4e9; width: 300px; z-index: 1000; background-color: #fff;">
+                    <div class="p-card-body px-3 overflow overflow-y-scroll" style="max-height: 400px;">
+                        <div class="p-d-flex p-ai-center p-mb-3">
+                            <p class="p-text-left p-m-0 ">Notifications</p>
+                            <p class="p-ml-auto  text-primary text-sm  ml-6 cursor-pointer">Clear All</p>
+                        </div>
+                        <hr>
+
+                        <div class="p-mb-3 flex justify-content-center align-items-center">
+                            <img src="../../../assets/images/profile.jpg" width="40px" height="40px" alt=""
+                                style="border-radius: 50%;">
+                            <p class="p-ml-2 p-text-left text-sm ml-2">Carlay has approved your friend request <br>
+                                <span class="opacity-50">4 Min ago</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="p-mb-3 flex justify-content-center align-items-center">
+                            <img src="../../../assets/images/profile.jpg" width="40px" height="40px" alt=""
+                                style="border-radius: 50%;">
+                            <p class="p-ml-2 p-text-left text-sm ml-2">Carlay has approved your friend request <br>
+                                <span class="opacity-50">4 Min ago</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="p-mb-3 flex justify-content-center align-items-center">
+                            <img src="../../../assets/images/profile.jpg" width="40px" height="40px" alt=""
+                                style="border-radius: 50%;">
+                            <p class="p-ml-2 p-text-left text-sm ml-2">Carlay has approved your friend request <br>
+                                <span class="opacity-50">4 Min ago</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="p-mb-3 flex justify-content-center align-items-center">
+                            <img src="../../../assets/images/profile.jpg" width="40px" height="40px" alt=""
+                                style="border-radius: 50%;">
+                            <p class="p-ml-2 p-text-left text-sm ml-2">Carlay has approved your friend request <br>
+                                <span class="opacity-50">4 Min ago</span>
+                            </p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                }
+                <div class="hidden md:flex p-d-flex p-jc-center p-ai-center cursor-pointer"
+                    style="width: 35px; height: 35px; background-color: #F7F7FA; border-radius: 50%;">
+                    <p-image src="../../../assets/images/scan.svg" alt="Image" width="20"></p-image>
+                </div>
+            </div>
+
+            <div class="ml-3 p-d-flex" (click)="toggleDropdown('profile')" style="position: relative">
+                <div class="p-d-flex p-jc-center p-ai-center cursor-pointer" style="  border: 2px solid #f3f3f4;"
+                    class="rounded-image">
+                    <img src="../../../assets/images/profile.jpg" alt="Image" width="45" />
+                </div>
+                <div class="hidden md:block cursor-pointer">
+                    <span class="text-sm font-semibold	">Ryan Taylor</span> <br>
+                    <span class="text-xs text-primary font-semibold	">Administrator</span> <br>
+                </div>
+                <i class="pi pi-angle-down mt-2 ml-2 hidden md:block cursor-pointer" style="font-size: 1rem "></i>
+            </div>
+            <div *ngIf="currentOpenDropdown === 'profile'" class="hidden lg:block" style="position: absolute; top: 80%; right: 2%;  border: 2px solid #f3f3f4;z-index: 1000; background-color: #fff;">
+                <!-- Dialog content -->
+                <ul style="list-style: none; padding: 0;" >
+                    <li class="flex px-4 myli" style="background-color: #f7f7f7;">
+                        <div class="p-d-flex p-jc-center p-ai-center cursor-pointer"
+                            style="  border: 2px solid #f3f3f4;" class="rounded-image">
+                            <img src="../../../assets/images/profile.jpg" alt="Image" width="45" />
+                        </div>
+                        <div class="hidden md:block cursor-pointer ml-2">
+                            <span class="text-sm font-semibold	">Ryan Taylor</span> <br>
+                            <span class="text-xs text-primary font-semibold	">Administrator</span> <br>
+                        </div>
+                    </li> 
+                    <li class="px-4 py-2 myli">My Profile</li> 
+                    <li class="px-4 py-2 myli">Inbox</li> 
+                    <li class="px-4 py-2">Logout</li> 
+                </ul>
+
+            </div>
+        </div>
+    </p-toolbar>
+</div>

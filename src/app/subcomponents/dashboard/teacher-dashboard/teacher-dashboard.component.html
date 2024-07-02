@@ -1,0 +1,226 @@
+<div class=" px-5 py-4" style="background-color: #f7f7fa; min-height: 100vh;">
+    <div class="flex justify-content-between">
+        <h2 class="">Welcome Teacher!</h2>
+        <div class="cursor-pointer mt-4">Home/ Teacher</div>
+    </div>
+
+    <div class="grid">
+        @for(items of admin; track items){
+        <div class="col-12 md:col-6 lg:col-3">
+            <div class="bg-white px-3 py-3 border-round-md ">
+                <div class="flex align-items-center justify-content-between ">
+                    <div class="pt-2">
+                        <small class="opacity-60 text-xsm">{{items.name}}</small>
+                        <h3 style="margin-top: 0px;">{{items.ach}}</h3>
+                    </div>
+                    <div class="ml-3 border-round-md" style="background-color: #EDF4FF;">
+                        <img [src]="items.img" alt="Admin Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+
+    <div class="mt-5 md:flex">
+        <div class="col-12  md:col-8 gap-2">
+            <div class="md:flex  gap-3">
+                <div class="col-12 md:col-8  border-round-md py-3" style="background: white;">
+                    <div class="flex justify-content-between align-items-center ">
+                        <p class="font-bold">Upcoming Lesson</p>
+                        <small class="text-primary">View All Courses</small>
+                    </div>
+
+                    <div class="flex">
+                        <div class="">
+                            <p class="font-semibold text-sm ">Lessons 30</p>
+                            <small class="opacity-60 " style="margin-top: -10px;">3.1 opsumm dolor</small>
+                            <p class="opacity-60 mt-2 text-sm"> <i class="pi pi-calendar"></i> Sep 5, 2022 | <i
+                                    class="pi pi-clock"></i> 9:00 to 10 am</p>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <p class="text-primary text-sm ml-6">Confirmed</p>
+                            <p-button label="Rescheduled" size="small" />
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="">
+                            <p class="font-semibold text-sm ">Lessons 30</p>
+                            <small class="opacity-60 " style="margin-top: -10px;">3.1 opsumm dolor</small>
+                            <p class="opacity-60 mt-2 text-sm"> <i class="pi pi-calendar"></i> Sep 5, 2022 | <i
+                                    class="pi pi-clock"></i> 9:00 to 10 am</p>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <p class="text-primary text-sm ml-6">Confirmed</p>
+                            <p-button label="Rescheduled" size="small" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden md:block  md:col-4 border-round-md py-3" style="background: white;">
+                    <p class="text-lg font-bold">Semester Progress</p>
+                    <div class="card align-items-center">
+                        <p-chart type="doughnut" [data]="data" [options]="options" />
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="  mt-8 py-5 px-3 border-round-md bg-white">
+                <p class="font-bold">Teaching Activity</p>
+                <div class="card">
+                    <p-chart type="line" [data]="datatwo" [options]="optionstwo" />
+                </div>
+            </div>
+
+            <div class="  mt-5 px-4 py-3 border-round-md bg-white">
+                <div class="flex justify-content-between align-items-center">
+                    <p class="font-bold">Teaching History</p>
+                    <i class="pi pi-ellipsis-v"></i>
+                </div>
+                <div class="md:flex ">
+                    <p class="text-primary white-space-nowrap">Sep 22</p>
+                    <div class="ml-3 ">
+                        <h3 class="font-bold">Mathematics</h3>
+                        <div class="flex mb-4 md:mb-0" >
+                            <span class="opacity-50 text-xs" > <i class="pi pi-calendar">&nbsp;September 5, 2022</i></span> |
+                            <span class="opacity-50 text-xs ml-3"> <i class="pi pi-clock">&nbsp;09:00 am - 10:00 am (60
+                                    Minutes)</i></span>
+                        </div>
+                    </div>
+                    <p-button label="Progress" size="small"  class="mt-5 text-sm font-light" severity="secondary" />
+                </div>
+                <div class="md:flex ">
+                    <p class="text-primary white-space-nowrap">Sep 22</p>
+                    <div class="ml-3 ">
+                        <h3 class="font-bold">Botany</h3>
+                        <div class="flex mb-4 md:mb-0" >
+                            <span class="opacity-50 text-xs" > <i class="pi pi-calendar">&nbsp;September 5, 2022</i></span> |
+                            <span class="opacity-50 text-xs ml-3"> <i class="pi pi-clock">&nbsp;09:00 am - 10:00 am (60
+                                    Minutes)</i></span>
+                        </div>
+                    </div>
+                    <p-button label="Completed" size="small"  class="mt-5 text-sm font-light" severity="secondary" />
+                </div>
+                <div class="md:flex ">
+                    <p class="text-primary white-space-nowrap">Sep 22</p>
+                    <div class="ml-3 ">
+                        <h3 class="font-bold">Mathematics</h3>
+                        <div class="flex mb-4 md:mb-0" >
+                            <span class="opacity-50 text-xs" > <i class="pi pi-calendar">&nbsp;September 5, 2022</i></span> |
+                            <span class="opacity-50 text-xs ml-3"> <i class="pi pi-clock">&nbsp;09:00 am - 10:00 am (60
+                                    Minutes)</i></span>
+                        </div>
+                    </div>
+                    <p-button label="Progress" size="small"  class="mt-5 text-sm font-light" severity="secondary" />
+                </div>
+              
+            </div>
+
+        </div>
+
+        <div class="col-12   md:col-4 md:ml-4 md:py-5 border-round-md bg-white">
+
+            <div class="card flex justify-content-center">
+                <p-calendar class="max-w-full custom-calendar" size="small" [(ngModel)]="date" [inline]="true" />
+            </div>
+            <hr>
+
+            <div class="mt-4 px-3">
+                <div class="flex justify-content-between align-items-center ">
+                    <p class="font-semibold">Upcoming Events</p>
+                    <i class="pi pi-plus-circle cursor-pointer"></i>
+                </div>
+                <div class="flex justify-content-between align-items-center ">
+                    <p class="font-semibold">10 Jan</p>
+                    <i class="pi pi-ellipsis-h  "></i>
+                </div>
+
+                <div class="flex  align-items-center">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+            </div>
+            <div class="mt-5 px-3">
+
+                <div class="flex justify-content-between align-items-center ">
+                    <p class="font-semibold">10 Jan</p>
+                    <i class="pi pi-ellipsis-h  "></i>
+                </div>
+
+                <div class="flex  align-items-center">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">8:00 am</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">Botony</span> <br>
+                        <span class="opacity-60 text-xs ">Lorem ipsum sit amet</span>
+                    </div>
+                    <small class="text-xs opacity-60">08:00 - 09:00 am</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

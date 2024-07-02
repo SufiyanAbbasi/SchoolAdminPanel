@@ -1,0 +1,42 @@
+::ng-deep .p-toolbar {
+    background-color: #ffffff !important;
+    border: none;
+    border-bottom: 1px solid #f3f3f4;
+    padding: 0.5rem;
+}
+
+.p-d-flex {
+    display: flex;
+}
+
+.p-jc-center {
+    justify-content: center;
+}
+
+.p-ai-center {
+    align-items: center;
+}
+
+.rounded-image img {
+    border-radius: 50%;
+}
+
+ .rounded-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.dialog-content{
+    margin-top: 10px;
+    cursor: pointer; 
+    padding: 10px 50px 10px 10px;
+    border-bottom: 1px solid #e4e4e9;
+}
+ul .myli{
+    border-bottom: 1px solid #e4e4e9;
+    
+}
+li{
+    cursor: pointer;
+}

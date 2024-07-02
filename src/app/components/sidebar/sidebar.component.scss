@@ -1,0 +1,11 @@
+/* styles.css or component-specific CSS */
+
+/* Ensure the sidebar backdrop is hidden */
+::ng-deep .p-sidebar-mask {
+    display: none !important;
+}
+
+/* Adjust the sidebar's z-index if necessary */
+::ng-deep .p-sidebar {
+    z-index: 1000;
+}
