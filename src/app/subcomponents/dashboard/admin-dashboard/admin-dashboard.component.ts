@@ -64,6 +64,33 @@ export class AdminDashboardComponent {
     }
   ]
 
+  studentActivity = [
+    {
+        img: "/assets/images/admin5.svg",
+        position:"1st Place in 'Chess'",
+        participation:"John Doe won 1st place in 'Chess'",
+        time: "1 day ago"
+    },
+    {
+        img: "/assets/images/admin6.svg",
+        position:"Participated in 'Carrom'",
+        participation:"Justin Lee participated in 'Carrom'",
+        time: "2 hours ago"
+    },
+    {
+        img: "/assets/images/admin7.svg",
+        position:"International in 'St.John School'",
+        participation:"Justin  conference in 'St.John School'",
+        time: "2 day ago"
+    },
+    {
+        img: "/assets/images/admin8.svg",
+        position:"1st Place in 'Chess'",
+        participation:"John Doe won 1st place in 'Chess'",
+        time: "3 days ago"
+    },
+
+  ]
 
   tableData = [
     { id: 'PRE2209', name: 'John Smith', marks: 1155, percentage: '80%', year: 2020 },

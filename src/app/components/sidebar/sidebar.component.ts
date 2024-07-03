@@ -58,7 +58,7 @@ export class SidebarComponent {
     {
       category: "Main Menu",
       items: [
-        { id: 1, name: "Dashboard", icon: "pi pi-th-large", sublist: ['Admin dashboard', 'Teacher Dashboard', 'Student Dasboard'] },
+        { id: 1, name: "Dashboard", icon: "pi pi-th-large", sublist: ['Admin dashboard', 'Teacher Dashboard', 'Student Dashboard'] },
         { id: 2, name: "Students", icon: "pi pi-graduation-cap", sublist: ['Student List', 'Student View', 'Student Add', 'Student Edit'] },
         { id: 3, name: "Teachers", icon: "pi pi-user", sublist: ['Teachers List', 'Teachers View', 'Teachers Add', 'Teachers Edit'] },
         { id: 4, name: "Department", icon: "pi pi-building", sublist: ['Department List', 'Department Add', 'Department Edit'] },

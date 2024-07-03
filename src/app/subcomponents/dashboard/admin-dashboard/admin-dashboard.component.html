@@ -22,98 +22,75 @@
         }
     </div>
 
- <div class=" grid flex mt-5">
+    <div class=" grid flex mt-5">
 
-        <div class="bg-white px-3  border-round-md col-12  md:col-6 " >
+        <div class="bg-white px-3  border-round-md col-12  md:col-6 ">
             <h3 class="">Overview</h3>
             <div class="card">
                 <p-chart type="line" [data]="data" [options]="options" />
             </div>
         </div>
-        <div class="bg-white px-3 border-round-md col-12 md:col-6 " >
+        <div class="bg-white px-3 border-round-md col-12 md:col-6 ">
             <h3 class="">Number of Students</h3>
             <div class="card">
                 <p-chart type="bar" [data]="datatwo" [options]="optionstwo" />
             </div>
         </div>
-    </div> 
+    </div>
 
 
     <div class="grid mt-5">
-    
 
-            <div class="bg-white px-3 border-round-md col-12 md:col-6">
-                <h3>Star Students</h3>
-                <div class="card">
-                    <div class="flex justify-content-center mb-3">
-                        <p-selectButton [multiple]="false" optionLabel="name" optionValue="class" />
-                    </div>
-                    <p-table [value]="tableData" [tableStyle]="{ 'min-width': '40rem' }">
-                        <ng-template pTemplate="header">
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Marks</th>
-                                <th>Percentage</th>
-                                <th>Year</th>
-                            </tr>
-                        </ng-template>
-
-                        <ng-template pTemplate="body" let-data>
-                            <tr>
-                                <td>{{ data.id }}</td>
-                                <td>{{ data.name }}</td>
-                                <td>{{ data.marks }}</td>
-                                <td>{{ data.percentage }}</td>
-                                <td>{{ data.year }}</td>
-                            </tr>
-                        </ng-template>
-                    </p-table>
+        <div class="bg-white px-3 border-round-md col-12 md:col-6">
+            <h3>Star Students</h3>
+            <div class="card">
+                <div class="flex justify-content-center mb-3">
+                    <p-selectButton [multiple]="false" optionLabel="name" optionValue="class" />
                 </div>
+                <p-table [value]="tableData" [tableStyle]="{ 'min-width': '40rem' }">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Marks</th>
+                            <th>Percentage</th>
+                            <th>Year</th>
+                        </tr>
+                    </ng-template>
 
+                    <ng-template pTemplate="body" let-data>
+                        <tr>
+                            <td>{{ data.id }}</td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.marks }}</td>
+                            <td>{{ data.percentage }}</td>
+                            <td>{{ data.year }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
             </div>
 
-            <div class="bg-white px-3 border-round-md col-12 md:col-6">
-                <h3>Student Activity</h3>
-                <div class="flex mt-5 align-items-center ">
-                    <div class="bg-blue-200 mt-3">
-                        <img class="p-2" src="/assets/images/admin5.svg" alt="">
-                    </div>
-                    <div class="ml-3">
-                        <p class="font-bold">1st Place in "Chess"</p>
-                        <small class="text-xsm opacity-60">John Doe won 1st place in "Chess"</small>
-                    </div>
-                    <div class="bg-yellow-100 b border-round-lg ml-5 mt-3">
-                        <small class="p-3">Online</small>
-                    </div>
-                </div>
-                <div class="flex mt-5 align-items-center ">
-                    <div class="bg-blue-200 mt-3">
-                        <img class="p-2" src="/assets/images/admin5.svg" alt="">
-                    </div>
-                    <div class="ml-3">
-                        <p class="font-bold">1st Place in "Chess"</p>
-                        <small class="text-xsm opacity-60">John Doe won 1st place in "Chess"</small>
-                    </div>
-                    <div class="bg-yellow-100 b border-round-lg ml-5 mt-3">
-                        <small class="p-3">Online</small>
-                    </div>
-                </div>
-                <div class="flex mt-5 align-items-center ">
-                    <div class="bg-blue-200 mt-3">
-                        <img class="p-2" src="/assets/images/admin5.svg" alt="">
-                    </div>
-                    <div class="ml-3">
-                        <p class="font-bold">1st Place in "Chess"</p>
-                        <small class="text-xsm opacity-60">John Doe won 1st place in "Chess"</small>
-                    </div>
-                    <div class="bg-yellow-100 b border-round-lg ml-5 mt-3">
-                        <small class="p-3">Online</small>
-                    </div>
-                </div>
+        </div>
 
+        <div class="bg-white px-3 border-round-md col-12 md:col-6">
+            <h3>Student Activity</h3>
+            @for(items of studentActivity; track items){
+            <div class="flex mt-4 align-items-center ">
+                <div class="bg-blue-200 mt-3">
+                    <!-- <img class="p-2" src="/assets/images/admin5.svg" alt=""> -->
+                    <img class="p-2" [src]="items.img" alt="">
+                </div>
+                <div class="ml-3">
+                    <p class="font-bold">{{items.position}}</p>
+                    <small class="text-xsm opacity-60">{{items.participation}}</small>
+                </div>
+                <div class="bg-yellow-100 b border-round-lg ml-5 mt-3">
+                    <small class="p-3">{{items.time}}</small>
+                </div>
             </div>
-  
+            }
+
+        </div>
 
     </div>
 
