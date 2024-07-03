@@ -110,7 +110,7 @@ export class SidebarComponent {
       case 'student dashboard':
         return '/studentdashboard';
       case 'student list':
-        return '/students/list';
+        return '/studentlist';
       case 'student view':
         return '/students/view';
       case 'student add':
