@@ -1,1 +1,193 @@
-<div>Student</div>
+<div class=" px-5 py-4" style="background-color: #f7f7fa; min-height: 100vh;">
+    <div class="flex justify-content-between">
+        <h2 class="">Welcome Student!</h2>
+        <div class="cursor-pointer mt-4">Home/ Student</div>
+    </div>
+
+    <div class="grid">
+        @for(items of students; track items){
+        <div class="col-12 md:col-6 lg:col-3">
+            <div class="bg-white px-3 py-3 border-round-md ">
+                <div class="flex align-items-center justify-content-between ">
+                    <div class="pt-2">
+                        <small class="opacity-60 text-xsm">{{items.name}}</small>
+                        <h3 style="margin-top: 0px;">{{items.ach}}</h3>
+                    </div>
+                    <div class="ml-3 border-round-md" style="background-color: #EDF4FF;">
+                        <img [src]="items.img" alt="Admin Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="mt-5 md:flex">
+        <div class="col-12  md:col-8 gap-2">
+            <div class="md:flex ">
+
+                <div class="col-12 md:col-12  border-round-md py-3" style="background: white;">
+
+                    <div class="flex justify-content-between align-items-center ">
+                        <p class="font-bold">Today's Lesson</p>
+                        <span> <small class="text-primary font-semibold mr-3">View All</small><i
+                                class="pi pi-ellipsis-v"></i></span>
+                    </div>
+
+                    <div class="flex flex-column align-items-center sm:flex-row justify-content-between ">
+                        <div style="max-width: 30%;">
+                            <div class="card align-items-center mt-2">
+                                <p-chart type="doughnut" [data]="data" [options]="options" />
+                            </div>
+                        </div>
+
+                        <div class="mt-5 sm:mt-0">
+                            <div class="flex ">
+                                <i class="pi pi-desktop mt-1"></i>
+                                <div class="ml-2">
+                                    <span class="opacity-50 text-sm ">Class</span>
+                                    <p class="font-semibold " style="margin-top: -2px;">Electrical Eng</p>
+                                </div>
+                            </div>
+                            <div class="flex ">
+                                <i class="pi pi-book mt-1"></i>
+                                <div class="ml-2">
+                                    <span class="opacity-50 text-sm ">Lessons</span>
+                                    <p class="font-semibold " style="margin-top: -2px;">5 Lessons</p>
+                                </div>
+                            </div>
+                            <div class="flex ">
+                                <i class="pi pi-clock mt-1"></i>
+                                <div class="ml-2">
+                                    <span class="opacity-50 text-sm ">Time</span>
+                                    <p class="font-semibold " style="margin-top: -2px;">Lessons</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 sm:mt-0">
+                            <div class="flex ">
+                                <i class="pi pi-desktop mt-1"></i>
+                                <div class="ml-2">
+                                    <span class="opacity-50 text-sm ">Class</span>
+                                    <p class="font-semibold " style="margin-top: -2px;">Electrical Eng</p>
+                                </div>
+                            </div>
+                            <div class="flex ">
+                                <i class="pi pi-book mt-1"></i>
+                                <div class="ml-2">
+                                    <span class="opacity-50 text-sm ">Lessons</span>
+                                    <p class="font-semibold " style="margin-top: -2px;">5 Lessons</p>
+                                </div>
+                            </div>
+                            <div class="flex ">
+                                <i class="pi pi-clock mt-1"></i>
+                                <div class="ml-2">
+                                    <span class="opacity-50 text-sm ">Time</span>
+                                    <p class="font-semibold " style="margin-top: -2px;">Lessons</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <p-button label="skip" severity="secondary" class="ml-3" /> <br> <br>
+                            <p-button label="Continue" severity="info" />
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+            <div class="  mt-8 py-5 px-3 border-round-md bg-white">
+                <p class="font-bold">Teaching Activity</p>
+                <div class="card">
+                    <p-chart type="line" [data]="datatwo" [options]="optionstwo" />
+                </div>
+            </div>
+
+            <div class="  mt-5 px-4 py-3 border-round-md bg-white">
+                <div class="flex justify-content-between align-items-center">
+                    <p class="font-bold">Teaching History</p>
+                    <i class="pi pi-ellipsis-v"></i>
+                </div>
+                <div class="md:flex ">
+                    <p class="text-primary white-space-nowrap">Sep 22</p>
+                    <div class="ml-3 ">
+                        <h3 class="font-bold">Mathematics</h3>
+                        <div class="flex mb-4 md:mb-0">
+                            <span class="opacity-50 text-xs"> <i class="pi pi-calendar">&nbsp;September 5,
+                                    2022</i></span> |
+                            <span class="opacity-50 text-xs ml-3"> <i class="pi pi-clock">&nbsp;09:00 am - 10:00 am (60
+                                    Minutes)</i></span>
+                        </div>
+                    </div>
+                    <p-button label="Progress" size="small" class="mt-5 text-sm font-light" severity="secondary" />
+                </div>
+                <div class="md:flex ">
+                    <p class="text-primary white-space-nowrap">Sep 22</p>
+                    <div class="ml-3 ">
+                        <h3 class="font-bold">Botany</h3>
+                        <div class="flex mb-4 md:mb-0">
+                            <span class="opacity-50 text-xs"> <i class="pi pi-calendar">&nbsp;September 5,
+                                    2022</i></span> |
+                            <span class="opacity-50 text-xs ml-3"> <i class="pi pi-clock">&nbsp;09:00 am - 10:00 am (60
+                                    Minutes)</i></span>
+                        </div>
+                    </div>
+                    <p-button label="Completed" size="small" class="mt-5 text-sm font-light" severity="secondary" />
+                </div>
+                <div class="md:flex ">
+                    <p class="text-primary white-space-nowrap">Sep 22</p>
+                    <div class="ml-3 ">
+                        <h3 class="font-bold">Mathematics</h3>
+                        <div class="flex mb-4 md:mb-0">
+                            <span class="opacity-50 text-xs"> <i class="pi pi-calendar">&nbsp;September 5,
+                                    2022</i></span> |
+                            <span class="opacity-50 text-xs ml-3"> <i class="pi pi-clock">&nbsp;09:00 am - 10:00 am (60
+                                    Minutes)</i></span>
+                        </div>
+                    </div>
+                    <p-button label="Progress" size="small" class="mt-5 text-sm font-light" severity="secondary" />
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-12   md:col-4 md:ml-4 md:py-5 border-round-md bg-white">
+
+            <div class="card flex justify-content-center">
+                <p-calendar class="max-w-full custom-calendar" size="small" [(ngModel)]="date" [inline]="true" />
+            </div>
+            <hr>
+
+            <div class="mt-4 px-3">
+                <div class="flex justify-content-between align-items-center ">
+                    <p class="font-semibold">Upcoming Events</p>
+                    <i class="pi pi-plus-circle cursor-pointer"></i>
+                </div>
+                @for(items of upcomingEvents; track items){
+                <div class="flex justify-content-between align-items-center mt-2">
+                    <p class="font-semibold">{{items.category}}</p>
+                    <i class="pi pi-ellipsis-h  "></i>
+                </div>
+                @for(mydata of items.data; track mydata){
+                <div class="flex  align-items-center mt-4">
+                    <p class="text-xs white-space-nowrap ">{{mydata.time}}</p>
+                    <div class="ml-3 px-2 " style="border-left: 5px solid #3D5EE1;">
+                        <span class="font-bold text-sm " style="margin-top: -5px;">{{mydata.subject}}</span> <br>
+                        <span class="opacity-60 text-xs ">{{mydata.para}}</span>
+                    </div>
+                    <small class="text-xs opacity-60">{{mydata.sch}}</small>
+                </div>
+                }
+                }
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

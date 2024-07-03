@@ -46,6 +46,28 @@ export class TeacherDashboardComponent {
 
   ]
 
+  upcomingEvents = [
+   {
+    category: "10 Jan",
+    data : [
+      {  time: "8:00 am",subject: "Botony", para:"Lorem ipsum sit amet", sch:"08:00 - 09:00 am"  },
+      {  time: "9:00 am",subject: "Botony", para:"Lorem ipsum sit amet", sch:"09:00 - 10:00 am"  },
+      {  time: "10:00 am",subject: "Botony", para:"Lorem ipsum sit amet", sch:"10:00 - 11:00 am"  },
+    ]
+   },
+   {
+    category: "10 Jan",
+    data : [
+      {  time: "8:00 am",subject: "English", para:"Lorem ipsum sit amet", sch:"08:00 - 09:00 am"  },
+      {  time: "9:00 am",subject: "Mathematics", para:"Lorem ipsum sit amet", sch:"09:00 - 10:00 am"  },
+      {  time: "10:00 am",subject: "Botony", para:"Lorem ipsum sit amet", sch:"10:00 - 11:00 am"  },
+      {  time: "11:00 am",subject: "Break", para:"Lorem ipsum sit amet", sch:"11:00 - 12:00 pm"  },
+      {  time: "12:00 am",subject: "History", para:"Lorem ipsum sit amet", sch:"12:00 - 1:00 pm"  },
+    ]
+   },
+
+  ]
+
   circlechart() {
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
