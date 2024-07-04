@@ -9,57 +9,47 @@
             <h3>Student Information</h3>
             <i class="pi pi-ellipsis-v"></i>
         </div>
-        <div class="lg:flex lg:gap-3">
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">First name *</label>
-                <input pInputText id="username" placeholder="Enter First Name" aria-describedby="username-help"
-                    [(ngModel)]="value2" />
+        <form (ngSubmit)="onSubmit()">
+            <div class="lg:flex lg:gap-3">
+              <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
+                <label for="firstname">First name *</label>
+                <input pInputText id="firstname" placeholder="Enter First Name" [(ngModel)]="value" name="firstname" required />
+              </div>
+              <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
+                <label for="lastname">Last name *</label>
+                <input pInputText id="lastname" placeholder="Enter Last Name" [(ngModel)]="value2" name="lastname" required />
+              </div>
+              <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
+                <label for="gender">Gender *</label>
+                <p-dropdown [options]="gender" [(ngModel)]="selectedGender" optionLabel="option" placeholder="Select Your Gender" name="gender" required></p-dropdown>
+              </div>
             </div>
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Last name *</label>
-                <input pInputText id="username" placeholder="Enter Last Name" aria-describedby="username-help"
-                    [(ngModel)]="value3" />
+            <div class="lg:flex lg:gap-3">
+              <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
+                <label for="dob">Date of Birth *</label>
+                <p-calendar [(ngModel)]="date" inputId="dob" dateFormat="yy-mm-dd" name="dob" required></p-calendar>
+              </div>
+              <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
+                <label for="phone">Phone *</label>
+                <input pInputText id="phone" placeholder="Enter Phone" [(ngModel)]="value4" name="phone" required />
+              </div>
+              <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
+                <label for="class">Class *</label>
+                <input pInputText id="class" placeholder="Enter Class" [(ngModel)]="value3" name="class" required />
+              </div>
             </div>
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Gender *</label>
-                <p-dropdown [options]="gender" [(ngModel)]="selectedGender" optionLabel="option"
-                    placeholder="Select Your Gender" />
+            <div class="lg:flex lg:gap-3">
+              <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
+                <label for="admission-id">Admission Id *</label>
+                <input pInputText id="admission-id" placeholder="Enter Admission Id" [(ngModel)]="value5" name="admission-id" disabled />
+              </div>
             </div>
-        </div>
-        <div class="lg:flex lg:gap-3 mt-3">
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Date Of Birth *</label>
-                <p-calendar [(ngModel)]="date" [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
+            <div class="flex justify-content-center gap-2 mt-4">
+              <p-button label="Submit" icon="pi pi-check" iconPos="right" type="submit"></p-button>
+              <!-- <p-button label="Reset" icon="pi pi-refresh" iconPos="right" type="reset"></p-button> -->
             </div>
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Roll*</label>
-                <input pInputText id="username" placeholder="Enter Roll Number" aria-describedby="username-help"
-                    [(ngModel)]="value4" />
-            </div>
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Blood Group *</label>
-                <p-dropdown [options]="bloodGroup" [(ngModel)]="selectedBlood" optionLabel="option"
-                    placeholder="Select Blood Group" />
-            </div>
-        </div>
-        <div class="lg:flex lg:gap-3 mt-3">
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Email*</label>
-                <input pInputText id="username" placeholder="Enter Your Email" aria-describedby="username-help"
-                    [(ngModel)]="value5" />
-            </div>
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Admission Id*</label>
-                <input pInputText id="username" placeholder="Enter Admission Id" aria-describedby="username-help"
-                    [(ngModel)]="value6" />
-            </div>
-            <div class="flex col-10 sm:col-6 lg:col-4 flex-column gap-2">
-                <label for="username">Relegion *</label>
-                <p-dropdown [options]="Rel" [(ngModel)]="selectedRel" optionLabel="option"
-                    placeholder="Select Your Relegion" />
-            </div>
-        </div>
-
+          </form>
+<!-- 
         <div class="px-3 mt-4">
             <h4>Upload Student Photo (150px X 150px)</h4>
             <label for="fileInput" class="custom-file-upload">
@@ -69,6 +59,6 @@
             <p-button label="Submit"  class="p-button-primary"></p-button>
 
            
-        </div>
+        </div> -->
     </div>
 </div>

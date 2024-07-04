@@ -22,7 +22,7 @@
             <p-button icon="pi pi-plus" />
         </div>
         <div class="card">            
-            <p-table [value]="customer" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"
+            <p-table [value]="students" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"
                 [rowsPerPageOptions]="[5, 10, 20]">
                 
                 <ng-template pTemplate="header">
@@ -37,16 +37,16 @@
 
                     </tr>
                 </ng-template>
-                <ng-template pTemplate="body" let-customer>
+                <ng-template pTemplate="body" let-student>
                     <tr>
-                        <td>{{ customer.id }}</td>
-                        <td>{{ customer.name }}</td>
-                        <td>{{ customer.class }}</td>
-                        <td>{{ customer.dob }}</td>
-                        <td>{{ customer.mobile }}</td>
-                        <td>{{ customer.address }}</td>
-                        <td><i class="pi pi-eye"></i><i class="pi 
-                            pi-pen-to-square ml-2 cursor-pointer" routerLink="/studentedit"></i></td>
+                        <td>{{ student.id }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.class }}</td>
+                        <td>{{ student.dob }}</td>
+                        <td>{{ student.mobile }}</td>
+                        <td>{{ student.address }}</td>
+                        <td><i class="pi pi-eye cursor-pointer" routerLink="/studentview/{{ student.id }}"></i><i class="pi 
+                            pi-pen-to-square ml-2 cursor-pointer" routerLink="/studentedit/{{ student.id }}"></i></td>
                     </tr>
                 </ng-template>
             </p-table>

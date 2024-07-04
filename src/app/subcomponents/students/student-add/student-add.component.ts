@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { FileUploadModule } from 'primeng/fileupload';
+import { Student, StudentService } from '../../../../services/student.service';
+import { Router } from '@angular/router';
 interface data {
   option: string;
 }
@@ -37,31 +39,40 @@ export class StudentAddComponent {
 
   selectedRel: data | undefined;
 
-
+  constructor(private studentService: StudentService, private router: Router) { }
   ngOnInit() {
-      this.gender = [
-          { option: 'Male' },
-          { option: 'Female' },
-          { option: 'Others' },
-     
-      ];
+    this.gender = [
+      { option: 'Male' },
+      { option: 'Female' },
+      { option: 'Others' },
 
-      this.bloodGroup = [
-        { option: 'A+' },
-        { option: 'A-' },
-        { option: 'B+' },
-        { option: 'B-' },
-        { option: 'O-' },
-        { option: 'O+' },
-      ];
+    ];
 
-      this.Rel =[
-        { option: 'Islam' },
-        { option: 'Christian' },
-        { option: 'Others' },
-      ]
+    this.bloodGroup = [
+      { option: 'A+' },
+      { option: 'A-' },
+      { option: 'B+' },
+      { option: 'B-' },
+      { option: 'O-' },
+      { option: 'O+' },
+    ];
+
+    this.Rel = [
+      { option: 'Islam' },
+      { option: 'Christian' },
+      { option: 'Others' },
+    ]
   }
-  onUpload(){
-    
+  onSubmit() {
+    const newStudent: Student = {
+      id: this.value5, // Assuming Admission ID is used as the student ID
+      name: `${this.value} ${this.value2}`,
+      class: this.value3, // Assuming roll number as class
+      dob: this.date ? this.date.toISOString().split('T')[0] : '',
+      mobile: this.value4,
+      address: '' // Add address field if required
+    };
+    this.studentService.addStudent(newStudent);
+    this.router.navigate(['/studentlist']);
   }
 }

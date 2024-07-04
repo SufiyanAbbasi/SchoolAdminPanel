@@ -14,6 +14,8 @@ export const routes: Routes = [
     {path: "studentdashboard", component: StudentDashboardComponent},
     {path: "studentlist", component: StudentListComponent},
     {path: "studentview", component: StudentViewComponent},
+    {path: "studentview/:id", component: StudentViewComponent},
     {path: "studentadd", component: StudentAddComponent},
     {path: "studentedit", component: StudentEditComponent},
+    {path: "studentedit/:id", component: StudentEditComponent},
 ];
