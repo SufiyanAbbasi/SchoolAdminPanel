@@ -3,15 +3,19 @@ import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'primeng/calendar';
 import { ChartModule } from 'primeng/chart';
+import { KnobModule } from 'primeng/knob';
 
 @Component({
   selector: 'app-student-dashboard',
   standalone: true,
-  imports: [ButtonModule, CalendarModule, FormsModule, ChartModule],
+  imports: [ButtonModule, CalendarModule, FormsModule, ChartModule, KnobModule],
   templateUrl: './student-dashboard.component.html',
   styleUrl: './student-dashboard.component.scss'
 })
 export class StudentDashboardComponent {
+  //knob value
+  value: number = 80;
+
   date: Date[] | undefined;
   data: any;
   options: any;

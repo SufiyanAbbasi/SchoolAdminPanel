@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 interface Customer {
   id: string;
@@ -20,7 +21,7 @@ interface Customer {
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [FormsModule, InputGroupModule, InputGroupAddonModule, InputTextModule,  ButtonModule, TableModule, CommonModule],
+  imports: [FormsModule, InputGroupModule, InputGroupAddonModule, InputTextModule,  ButtonModule, TableModule, CommonModule, RouterLink],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.scss'
 })

@@ -1,0 +1,6 @@
+.hide-value {
+    /* Hide the default progress bar text content */
+    text-indent: -9999px;
+    /* Ensure content doesn't overflow */
+    overflow: hidden;
+}

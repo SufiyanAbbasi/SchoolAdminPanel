@@ -36,7 +36,7 @@
                     <div class="flex flex-column align-items-center sm:flex-row justify-content-between ">
                         <div style="max-width: 30%;">
                             <div class="card align-items-center mt-2">
-                                <p-chart type="doughnut" [data]="data" [options]="options" />
+                                <p-knob [(ngModel)]="value" [min]="-50" [max]="50" />   
                             </div>
                         </div>
 

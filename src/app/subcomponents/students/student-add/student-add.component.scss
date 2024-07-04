@@ -1,0 +1,28 @@
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #333;
+    // border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #d0d0d0;
+    border-color: #bbb;
+    color: #222;
+}
+
+.custom-file-upload:active {
+    background-color: #c0c0c0;
+    border-color: #aaa;
+    color: #111;
+}
+
+#fileInput {
+    display: none;
+}
