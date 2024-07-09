@@ -118,6 +118,14 @@ export class SidebarComponent {
       case 'student edit':
         return '/studentedit';
       // Add more cases as needed
+      case 'teachers list':
+        return '/teacherslist'
+      case 'teachers view':
+        return '/teachersview'
+      case 'teachers add':
+        return '/teachersadd'
+      case 'teachers edit':
+        return '/teachersedit'
       default:
         return null;
     }

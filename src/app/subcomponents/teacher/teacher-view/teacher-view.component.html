@@ -1,0 +1,91 @@
+<div class=" px-5 py-4" style="background-color: #f7f7fa; min-height: 100vh;">
+    <div class="flex justify-content-between">
+        <h2 class="">Teachers Details</h2>
+        <div class="cursor-pointer mt-4">Teachers / Teachers Details</div>
+    </div>
+
+    <div class="bg-white border-round-lg mt-4 py-2 px-1 sm:px-4">
+        <div class="flex justify-content-between align-items-center">
+            <h2>Profile</h2>
+            <i class="pi pi-ellipsis-v"></i>
+        </div>
+
+        <div class="border-round-lg pb-4" style="background-color: #f7f7fa">
+            <p-image src="/assets/images/profilebg.jpg" alt="Image" width="100%" />
+            <div class="flex justify-content-between align-items-center flex-column sm:flex-row">
+                <img src="/assets/images/profes.jpg" alt="" style="margin-top: -30px; border-radius: 50%;">
+                <div>
+                    <h3 class="">Professor</h3>
+                    <p class="opacity-50 text-sm" style="margin-top: -15px;">My Subject</p>
+                </div>
+                <div class="">
+                    <p class="opacity-50 text-sm">Followers</p>
+                    <h3 class="font-bold" style="margin-top: -15px;">2850 </h3>
+                </div>
+
+                <div class="flex flex-column lg:flex-row gap-3 px-2">
+                    <p-button label="Follow" />
+                    <p-button label="Message" severity="secondary" />
+                </div>
+            </div>
+        </div>
+
+        <div class="grid mt-5 gap-6 px-2  ">
+            <div class="col-12 sm:col-10 md:col-4 sm:px-4 border-round-md" style=" border: 1px solid #9d9db7;">
+                <h3>Personal Details:</h3>
+                @for(data of personalDetails; track data){
+                <div class="flex ">
+                    <i class="{{ data.icon }}" style="color: #3D5EE1; margin-top: 0.3rem;"></i>
+                    <div class="ml-3">
+                        <span class="  font-semibold">{{data.title}}</span>
+                        <p class="opacity-50 font-semibold text-sm" style="margin-top: -2px;">{{data.subtitle}}</p>
+                    </div>
+                </div>
+                }
+            </div>
+
+            <div class="col-12 sm:col-10 md:col-7 border-round-md sm:px-4 py-3" style=" border: 1px solid #b2b2bd;">
+                <h3>About Me</h3>
+                <h3>Hello I am Professor!</h3>
+                <p class="text-sm opacity-60 line-height-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur officia deserunt mollit anim id est laborum. <br><br>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+                <h3 class="mt-3">Education</h3>
+                <div>
+                    <p class="text-sm">2008 - 2009</p>
+                    <span class="text-xs opacity-50">Secondary Schooling at xyz school of secondary education,
+                        Mumbai.</span>
+                </div>
+                <div>
+                    <p class="text-sm">2008 - 2009</p>
+                    <span class="text-xs opacity-50">Secondary Schooling at xyz school of secondary education,
+                        Mumbai.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 sm:col-10 md:col-4 sm:px-4 border-round-md mt-4" style=" border: 1px solid #9d9db7;">
+            <h3>Skills:</h3>
+            <div class="flex justify-content-between align-items-center">
+                <p class="text-sm font-semibold">Photoshop</p>
+                <span class="opacity-60 text-sm">90%</span>
+            </div>
+            <p-progressBar [value]="90" [style]="{ height: '8px' }" class="hide-value" />
+            <div class="flex justify-content-between align-items-center mt-3">
+                <p class="text-sm font-semibold">Code Editor</p>
+                <span class="opacity-60 text-sm">50%</span>
+            </div>
+            <p-progressBar [value]="50" [style]="{ height: '8px'}" class="hide-value" />
+            <div class="flex justify-content-between align-items-center mt-3">
+                <p class="text-sm font-semibold">Illustrator</p>
+                <span class="opacity-60 text-sm">50%</span>
+            </div>
+            <p-progressBar [value]="95" [style]="{ height: '8px'}" class="hide-value" />
+
+        </div>
+    </div>
+</div>
